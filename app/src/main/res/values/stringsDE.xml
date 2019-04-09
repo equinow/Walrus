@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2018 Daniel Underhay & Matthew Daley.
+  ~
+  ~ This file is part of Walrus.
+  ~
+  ~ Walrus is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Walrus is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Walrus.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    tools:ignore="MissingTranslation">
+
+    <!--
+        App-wide
+    -->
+
+    <!-- Application name -->
+    <string name="app_name" translatable="false">Walrus</string>
+
+    <!--
+        WalletActivity
+    -->
+
+    <!--
+        Update Notification Dialog
+    -->
+
+    <!-- Update notification title displayed when the application starts -->
+    <string name="update_notification_title">Wichtige Nachricht</string>
+
+    <!-- Update notification message displayed when the application starts -->
+    <string name="update_notification_message">Hallo Alpha-Tester! ❤️\n\nDie zukünftigen Versionen beinhalten neue Funktionen wie eine erweiterte Geräte- und Kartenunterstützung und allgemeine Fehlerbehebungen. Die Änderungen an der Datenbank und der Architektur sind leider so umfangreich, daß es für uns schwierig wird vorhandene Datenbanken zu übernehmen. Das bedeutet, dass existierende Karten verloren gehen, wenn wir den Alpha-Status verlassen oder es euch mitteilen. \n\nWir empfehlen in der Zwischenzeit die Kartendaten manuell zu speichern und entschuldigen uns für entstehende Unannehmlichkeiten! \n\n- Team Walrus</string>
+
+    <!-- Update notification button text-->
+    <string name="update_notification_neutral_button">OK</string>
+
+
+    <!--
+        BulkReadCardDataOperationRunner
+    -->
+
+    <!-- Toast displayed when bulk card reading fails with an error -->
+    <string name="failed_bulk_reading">Massenlesen fehlgeschlagen: 
+        <xliff:g id="amount">%1$s</xliff:g>
+    </string>
+
+
+    <!--
+        BulkReadCardsActivity
+    -->
+
+    <!-- Activity title -->
+    <string name="bulk_read_cards_activity_name">Massenlesen von Karten</string>
+
+    <!-- Displayed as a button -->
+    <string name="stop_button">Stop</string>
+
+    <!-- Displayed as a button -->
+    <string name="back_button">Zurück</string>
+
+    <!-- Used in status line of a bulk read list item -->
+    <plurals name="num_cards_read">
+        <item quantity="one">
+            <xliff:g id="amount">%1$d</xliff:g>
+            Karte gelesen 
+        </item>
+        <item quantity="other">
+            <xliff:g id="amount">%1$d</xliff:g>
+            Karten gelesen
+        </item>
+    </plurals>
+
+    <!-- Dialog title -->
+    <string name="bulk_reading_cards">Massenlesen von Karten</string>
+
+    <!-- Shown for operations with devices that have gone -->
+    <string name="device_gone">nicht verbundene Geräte</string>
+
+
+    <!--
+        BulkReadCardsService
+    -->
+
+    <!-- Name for bulk read notification channel -->
+    <string name="bulk_read_notification_channel_name">Massenlesen von Karten</string>
+
+    <!-- Used in notification context title -->
+    <plurals name="bulk_reading_from">
+        <item quantity="one">Karten gelesen <xliff:g id="amount">%1$d</xliff:g> Gerät
+        </item>
+        <item quantity="other">Karten gelesen <xliff:g id="amount">%1$d</xliff:g> Gerät
+        </item>
+    </plurals>
+
+
+    <!--
+        Card
+    -->
+
+    <!-- Default name for a newly created card -->
+    <string name="default_card_name">Unbenannte Karte</string>
+
+
+    <!--
+        CardActivity
+        DeleteAllCardsPreference
+    -->
+
+    <!-- Displayed as a button -->
+    <string name="delete_button">Löschen</string>
+
+
+    <!--
+        CardActivity
+    -->
+
+    <!-- Displayed as a button -->
+    <string name="view_card_data">Daten anzeigen</string>
+
+    <!-- Displayed as a button -->
+    <string name="write_card_data">Schreiben</string>
+
+    <!-- Displayed as a button -->
+    <string name="emulate_card_data">Emulieren</string>
+
+    <!-- Displayed as a button -->
+    <string name="read_card_data">Daten setzen</string>
+
+    <!-- Section header -->
+    <string name="date_acquired">Datum gefunden</string>
+
+    <!-- Section header -->
+    <string name="location">Ort</string>
+
+    <!-- Displayed in place of a location when none is available -->
+    <string name="unknown">Unbekannter Ort</string>
+
+    <!-- Section header -->
+    <string name="notes">Notiz</string>
+
+    <!-- Activity title when viewing a card -->
+    <string name="view_card">Karte ansehen</string>
+
+    <!-- Activity title when editing a new card -->
+    <string name="new_card">Neue Karte</string>
+
+    <!-- Activity title when editing a card -->
+    <string name="edit_card">Karte ändern</string>
+
+    <!-- Activity title when creating a bulk read card template -->
+    <string name="set_template">Template speichern</string>
+
+    <!-- Toast message shown when attempting to save a card with no name -->
+    <string name="card_name_required">Kartenname ist erforderlich</string>
+
+    <!-- Name for newly duplicated cards -->
+    <string name="copy_of">Kopie von
+        <xliff:g id="name">%1$s</xliff:g>
+    </string>
+
+    <!-- Dialog title -->
+    <string name="delete_card">Karte löschen</string>
+
+    <!-- Warning when a user deletes a card -->
+    <string name="delete_message">Dieser Vorgang kann nicht rückgängig gemacht werden. Bist du sicher, dass du weitermachen möchtest? 
+    </string>
+
+    <!-- Displayed as a button -->
+    <string name="cancel_button">Abbrechen</string>
+
+    <!-- Toast message shown when a user attempts to do something that requires a card device -->
+    <string name="no_card_devices">Kein Kartenleser verbunden</string>
+
+    <!-- Toast message shown when a user attempts to write a card without a supporting card
+         device -->
+    <string name="no_device_can_write">Kein verbundenes Gerät kann diese Kartenart beschreiben</string>
+
+    <!-- Toast message shown when a user attempts to emulate a card without a supporting card
+         device -->
+    <string name="no_device_can_emulate">Kein verbundenes Gerät kann diese Kartenart emulieren</string>
+
+    <!-- Dialog title -->
+    <string name="choose_card_type">Wähle den Kartentyp</string>
+
+    <!-- Dialog message -->
+    <string name="discard_card_changes">Änderungen verwerfen?</string>
+
+    <!-- Dialog message -->
+    <string name="discard_bulk_read_changes">Vorlage Massenlesen verwerfen?</string>
+
+    <!-- Displayed as a button -->
+    <string name="discard_button">Verwerfen</string>
+
+    <!-- Card device status -->
+    <string name="writing_card">Karte schreiben</string>
+
+    <!-- Card device status -->
+    <string name="emulating_card">Karte emulieren</string>
+
+    <!-- Card device status -->
+    <string name="performing_operation">Vorgang läuft</string>
+
+    <!-- Card device status -->
+    <string name="waiting_for_card">Auf Karte warten</string>
+
+    <!-- Toast shown when user tries to write or emulate a card with no card data -->
+    <string name="no_card_data">Karte hat keine Kartendaten</string>
+
+    <!-- Toast shown when card type doesn't have a view dialog -->
+    <string name="no_view_card_dialog">Dieser Kartentyp hat keine Detailansicht</string>
+
+    <!-- Dialog title -->
+    <string name="edit_card_data_title">Anleitung <xliff:g id="card_data_class">%1$s</xliff:g> data
+        entry
+    </string>
+
+    <!-- Dialog title -->
+    <string name="view_card_data_title">
+        <xliff:g id="card_data_class">%1$s</xliff:g>
+        data
+    </string>
+
+
+    <!--
+        CardDataIOView
+    -->
+
+    <!-- Textual description of read image -->
+    <string name="read_description">Lesen</string>
+
+    <!-- Textual description of write image -->
+    <string name="write_description">Schreiben</string>
+
+
+    <!--
+        CardDataIOOperationFragment
+    -->
+
+    <!-- Toast displayed when card writing fails with an error -->
+    <string name="failed_to_write">Karte schreiben fehlgeschlagen:
+        <xliff:g id="error">%1$s</xliff:g>
+    </string>
+
+    <!-- Toast displayed when card emulation fails with an error -->
+    <string name="failed_to_emulate">Karte emulieren fehlgeschlagen:
+        <xliff:g id="error">%1$s</xliff:g>
+    </string>
+
+    <!-- Toast displayed when card reading fails with an error -->
+    <string name="failed_to_read">Karte lesen fehlgeschlagen: 
+        <xliff:g id="error">%1$s</xliff:g>
+    </string>
+
+    <!-- Toast displayed when some other card operation fails with an error -->
+    <string name="failed_to_perform_operation">Vorgang fehlgeschlagen:
+        <xliff:g id="error">%1$s</xliff:g>
+    </string>
+
+
+    <!--
+        ChameleonMiniRevGActivity
+        Proxmark3Activity
+    -->
+
+    <!-- Section header -->
+    <string name="version">Versionsinformation</string>
+
+    <!-- Card device status -->
+    <string name="retrieving">Empfangen...</string>
+
+    <!-- Toast displayed when getting a device's version fails with an error -->
+    <string name="failed_get_version">Fehlgeschlagener Vorgang Version holen:
+        <xliff:g id="error">%1$s</xliff:g>
+    </string>
+
+
+    <!--
+        ChameleonMiniActivity
+    -->
+
+    <!-- Activity title -->
+    <string name="chameleon_mini_rev_g_activity_name" translatable="false">Chameleon Mini</string>
+
+    <!-- Activity title -->
+    <string name="chameleon_mini_rev_e_rebooted_activity_name" translatable="false">Chameleon Mini</string>
+
+    <!-- Device name -->
+    <string name="chameleon_mini_rev_g" translatable="false">Rev.G</string>
+
+    <!-- Device name -->
+    <string name="chameleon_mini_rev_e_rebooted" translatable="false">Rev.E Rebooted</string>
+
+
+    <!--
+        ChameleonMiniDevice
+        Proxmark3Device
+    -->
+
+    <!-- Card device status -->
+    <string name="idle">Wartend</string>
+
+    <!-- Shown in error message -->
+    <string name="device_busy">Gerät arbeitet</string>
+
+    <!-- Card device status -->
+    <string name="reading">Lesen</string>
+
+    <!-- Card device status -->
+    <string name="getting_version">Version holen</string>
+
+    <!-- Shown in error message -->
+    <string name="get_version_timeout">Zeitüberschreitung beim Empfang der Version.</string>
+
+    <!-- Error message when operation performed on device that has already gone -->
+    <string name="device_is_gone">Gerät nicht mehr verfügbar</string>
+
+
+    <!--
+        ChameleonMiniDevice
+    -->
+
+    <!-- Shown in error message -->
+    <string name="command_error">Unerwartete Antwort auf  <xliff:g id="command">%1$s</xliff:g> Kommando:
+        <xliff:g id="error">%2$s</xliff:g>
+    </string>
+
+    <!-- Card device status -->
+    <string name="emulating">Emulieren</string>
+
+
+    <!--
+        DeleteAllCardsPreference
+    -->
+
+    <!-- Shown in bold red color to draw attention -->
+    <string name="warning">Warnung!</string>
+
+    <!-- Warning when user deletes all cards -->
+    <string name="delete_all_cards">Alle Kartendaten werden gelöscht. Dieser Vorgang kann nicht rückgängig gemacht werden. Sind sie sicher? 
+    </string>
+
+    <!-- Toast message shown after all cards have been deleted -->
+    <string name="all_cards_deleted">Alle Karten wurden gelöscht</string>
+
+
+    <!--
+        DevicesActivity
+    -->
+
+    <!-- Activity title -->
+    <string name="devices_activity_name">Geräte</string>
+
+    <!-- Toast message shown when user tries open settings for a device that doesn't support any -->
+    <string name="device_has_no_settings">Gerät hat keine Einstellungen</string>
+
+
+    <!--
+        FixedElement
+    -->
+
+    <!-- Error message -->
+    <string name="invalid_fixed_value">Ungültiger Festwert</string>
+
+
+    <!--
+        HIDCardData
+    -->
+
+    <!-- Component label -->
+    <string name="hid_format">Format</string>
+
+    <!-- Format type -->
+    <string name="hid_raw">Raw</string>
+
+    <!-- Format type -->
+    <string name="hid_26_bit">HID 26-bit (H10301)</string>
+
+    <!-- Format type -->
+    <string name="hid_34_bit">HID 34-bit (H10306)</string>
+
+    <!-- Format type -->
+    <string name="hid_35_bit_corporate_1000">HID 35-bit Corporate 1000</string>
+
+    <!-- Format type -->
+    <string name="hid_37_bit">HID 37-bit (H10302)</string>
+
+    <!-- Format type -->
+    <string name="hid_37_bit_with_facility_code">HID 37-bit with Facility Code (H10304)</string>
+
+    <!-- Component label -->
+    <string name="hid_data">Data (hex)</string>
+
+    <!-- Component label -->
+    <string name="hid_facility_code">Facility Code</string>
+
+    <!-- Component label -->
+    <string name="hid_card_number">Kartennummer</string>
+
+    <!-- Message -->
+    <string name="hid_format_autodetected">Dieses Format wurde automatisch erkannt</string>
+
+
+    <!--
+        menu_bulk_read_card
+    -->
+
+    <!-- Shown as alternative to toolbar icon -->
+    <string name="start">Start</string>
+
+
+    <!--
+        menu_edit_card
+    -->
+
+    <!-- Shown as alternative to toolbar icon -->
+    <string name="save">Speichern</string>
+
+
+    <!--
+        menu_view_card
+    -->
+
+    <!-- Shown in toolbar menu -->
+    <string name="delete">Löschen</string>
+
+    <!-- Shown in toolbar menu -->
+    <string name="duplicate">Duplizieren</string>
+
+
+    <!--
+        menu_wallet
+        menu_wallet_fab
+    -->
+
+    <!-- Shown in floating action button speed dial -->
+    <string name="add_new_card">Neue Karte hinzufügen</string>
+
+    <!-- Shown in floating action button speed dial -->
+    <string name="bulk_read_cards">Mehrfachlesen von Karten</string>
+
+    <!-- Shown as alternative to toolbar icon -->
+    <string name="devices">Geräte</string>
+
+    <!-- Shown as alternative to toolbar icon -->
+    <string name="settings">Einstellungen</string>
+
+
+    <!--
+        menu_wallet
+        WalletActivity
+    -->
+
+    <!-- Shown as placeholder text for card search in wallet and as alternative to toolbar icon -->
+    <string name="search_cards">Karte suchen</string>
+
+
+    <!--
+        MifareCardData
+    -->
+
+
+    <!--
+        MifareReadSetupDialogFragment
+    -->
+
+    <!-- Dialog title -->
+    <string name="setup_mifare_read">Mifare Leseoptionen</string>
+
+    <!-- Button -->
+    <string name="add">Hinzufügen</string>
+
+    <string name="read_steps">Leseschritte</string>
+
+
+    <!--
+        ParityElement
+    -->
+
+    <!-- Error message -->
+    <string name="invalid_parity">Ungültige Parität</string>
+
+
+    <!--
+        PickCardDataTargetDialogFragment
+    -->
+
+    <!-- Dialog title -->
+    <string name="choose_source">Quelle wählen</string>
+
+    <!-- Dialog title -->
+    <string name="choose_sink">Ziel wählen</string>
+
+    <!-- Dialog title -->
+    <string name="choose_target">Ziel wählen</string>
+
+    <!-- Option in source listing -->
+    <string name="manual_entry">Manueller Eintrag</string>
+
+
+    <!--
+        preferences
+    -->
+
+    <!-- Preference group title -->
+    <string name="bulk_read_settings_preference">Mehrfaches Einlesen von Karten</string>
+
+    <!-- Preference title -->
+    <string name="bulk_read_vibrate_preference">Vibration beim Einlesen</string>
+
+    <!-- Preference group title -->
+    <string name="devices_settings_preference">Geräte</string>
+
+    <!-- Preference title -->
+    <string name="on_device_connected_preference">Vibration bei entfernen / verbinden des Geräts</string>
+
+    <!-- Preference group title -->
+    <string name="wallet_settings_preference">Börse</string>
+
+    <!-- Preference title -->
+    <string name="delete_all_cards_preference">Alle Karten löschen</string>
+
+    <!-- Preference group title -->
+    <string name="about_settings_preference">Über</string>
+
+    <!-- Preference title -->
+    <string name="open_source_preference">Open source Lizenzen</string>
+
+
+    <!--
+        preferences_chameleon_mini
+    -->
+
+    <!-- Preference title -->
+    <string name="card_slot_preference">Kartenplatz</string>
+
+    <!-- Preference message -->
+    <string name="card_slot_preference_message"><xliff:g>Chameleon Mini</xliff:g> Kartenplatz wird für die Emulation verwendet
+    </string>
+
+
+    <!--
+        Proxmark3Activity
+    -->
+
+    <!-- Activity title -->
+    <string name="proxmark3_activity_name" translatable="false">Proxmark3</string>
+
+    <!-- Device name -->
+    <string name="proxmark3" translatable="false">Proxmark3</string>
+
+    <!-- Section header. Tuning allows the user to check the RF response of the device's connected
+         antenna(s) -->
+    <string name="tune">Feinabstimmung</string>
+
+    <!-- Displayed as a button -->
+    <string name="tune_lf">Feinabstimmung LF</string>
+
+    <!-- Displayed as a button -->
+    <string name="tune_hf">Feinabstimmung HF</string>
+
+    <!-- Progress dialog message -->
+    <string name="tuning_progress">Feinabstimmung...</string>
+
+    <!-- Toast displayed when Proxmark3 tuning fails with an error -->
+    <string name="failed_to_tune">Feinabstimmung fehlgeschlagen:
+        <xliff:g id="error">%1$s</xliff:g>
+    </string>
+
+
+    <!--
+        Proxmark3Device
+    -->
+
+    <!-- Card device status -->
+    <string name="writing">Schreiben</string>
+
+    <!-- Shown in error message -->
+    <string name="write_card_timeout">Zeitüberschreitung beim Schreiben der Karte</string>
+
+    <!-- Card device status -->
+    <string name="tuning">Feinabstimmung</string>
+
+    <!-- Shown in error message -->
+    <string name="tune_timeout">Zeitüberschreitung bei der Feinabstimmung</string>
+
+
+    <!--
+        Proxmark3TuneResultActivity
+    -->
+
+    <!-- Activity title -->
+    <string name="proxmark3_tune_result_activity_name">
+        <xliff:g>Proxmark3</xliff:g>
+        - Tune Results
+    </string>
+
+    <!-- Used in tune results table. LF = Low Frequency -->
+    <string name="lf">LF</string>
+
+    <!-- Used in tune results table -->
+    <string name="_125khz" translatable="false">125kHz</string>
+
+    <!-- Used in tune results table -->
+    <string name="_134khz" translatable="false">134kHz</string>
+
+    <!-- Used in tune results table -->
+    <string name="optimal">Optimal</string>
+
+    <!-- Used in tune results table -->
+    <string name="tune_voltage" translatable="false">%.3fV</string>
+
+    <!-- Used in tune results table. Shows the peak voltage reached and what frequency it was
+         reached at during tuning -->
+    <string name="tune_peak_voltage"><xliff:g id="voltage">%1$.3fV</xliff:g>, erreicht bei:
+        <xliff:g id="frequency">%2$.3fkHz</xliff:g>
+    </string>
+
+    <!-- Used in tune results table -->
+    <string name="v" translatable="false">V</string>
+
+    <!-- Used in tune results table -->
+    <string name="khz" translatable="false">kHz</string>
+
+    <!-- Used in tune results table. HF = High Frequency -->
+    <string name="hf" translatable="false">HF</string>
+
+    <!-- Used in tune results table -->
+    <string name="_13_56mhz" translatable="false">13.56MHz</string>
+
+    <!-- Used in tune results table. Antenna usability rating -->
+    <string name="tune_ok">OK</string>
+
+    <!-- Used in tune results table. Antenna usability rating -->
+    <string name="tune_marginal">Marginal</string>
+
+    <!-- Used in tune results table. Antenna usability rating -->
+    <string name="tune_unusable">Unbenutzbar</string>
+
+
+    <!--
+        SettingsActivity
+    -->
+
+    <!-- Activity title -->
+    <string name="settings_activity_name">Einstellungen</string>
+
+
+    <!--
+        StaticKeyMifareReadStepDialogFragment
+    -->
+
+    <!-- Dialog title -->
+    <string name="add_mifare_static_key_read_step">Statischen Schlüssel zum Lesen hinzufügen</string>
+
+    <!-- Dialog title -->
+    <string name="edit_mifare_static_key_read_step">Statischen Schlüssel zum Lesen bearbeiten</string>
+
+    <!-- Label -->
+    <string name="blocks_to_read">Blöcke zu Lesen</string>
+
+    <!-- Label -->
+    <string name="key">Schlüssel</string>
+
+    <!-- Label -->
+    <string name="key_slots">Schlüsselplatz</string>
+
+    <!-- Shown when both A and B slots are picked -->
+    <string name="both">Beide</string>
+
+
+    <!--
+        UsbCardDevice
+    -->
+
+    <!-- Toast displayed when USB card device connection fails with an error -->
+    <string name="failed_open_usb_connection">USB-Verbindung fehlgeschlagen</string>
+
+
+    <!--
+        UsbSerialCardDevice
+    -->
+
+    <!-- Toast displayed when serial USB card device opening fails with an error -->
+    <string name="failed_open_usb_serial_device">Öffnen der seriellen USB-Schnittstelle fehlgeschlagen</string>
+
+
+    <!--
+        VariableBinaryComponent
+    -->
+
+    <!-- Error message, should be short -->
+    <string name="cant_be_empty">Darf nicht leer sein</string>
+
+    <!-- Error message, should be short -->
+    <string name="invalid_hex_value">Ungültiger Hex-Wert</string>
+
+    <!-- Error message, should be short -->
+    <string name="too_many_bits">Zu viele Bits</string>
+
+
+    <!--
+        WalletActivity
+    -->
+
+    <!-- Shown before requesting location permissions -->
+    <string name="location_rationale">Walrus kann (optional) deinen Gerätestandort verwenden um den Ort der mitgeschnittenen Karte zu ermitteln. 
+    </string>
+
+
+    <!--
+        WalrusApplication
+    -->
+
+    <!-- Toast message shown when a card device is connected -->
+    <string name="device_disconnected">
+        <xliff:g id="device">%1$s</xliff:g>
+        nicht verbunden
+    </string>
+
+    <!-- Toast message shown when a card device is disconnected -->
+    <string name="device_connected">
+        <xliff:g id="device">%1$s</xliff:g>
+        verbunden
+    </string>
+
+
+    <!--
+        Unsorted stuff falls here...
+    -->
+    <string name="dummy_to_catch_unsorted_stuff"
+            tools:keep="@string/dummy_to_catch_unsorted_stuff"/>
+
+</resources>
